@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(31, 31, 31);
+}
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "lateral meio lateral-superior"
+    "lateral meio lateral-inferior";
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.header{
+    grid-area: header;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.lateral{
+    grid-area: lateral;
+    width: 100%;
+    background-color: rgb(55, 248, 55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.meio{
+    grid-area: meio;
+    width: 100%;
+    background-color: rgb(1, 202, 202);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.lateral-superior{
+    grid-area: lateral-superior;
+    width: 100%;
+    background-color: rgb(102, 1, 102);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.lateral-inferior{
+    grid-area: lateral-inferior;
+    width: 100%;
+    background-color: rgb(255, 0, 191);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+@media (max-width: 768px){
+    .container{
+        grid-template-areas: 
+        "header"
+        "lateral"
+        "meio"
+        "lateral-superior"
+        "lateral-inferior";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
